@@ -1,0 +1,5 @@
+config SHIELD_ERGONAUTKB_NEO_LEFT
+    def_bool $(shields_list_contains,ergonautkb_neo_left)
+
+config SHIELD_ERGONAUTKB_NEO_RIGHT
+    def_bool $(shields_list_contains,ergonautkb_neo_right)
