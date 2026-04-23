@@ -8,16 +8,16 @@ name: ergonautkb_neo
 type: shield
 
 # Set this to a URL that documents the keyboard.
-url: https://example.com
+url: https://github.com/Ptark/ergonautkb-neo
 
 # Add any features your keyboard supports here.
 # See https://zmk.dev/docs/development/hardware-integration/hardware-metadata-files#features
 features:
   - keys
-  - studio  # Remove this line if your keyboard will not support ZMK Studio
+  - studio # Remove this line if your keyboard will not support ZMK Studio
 
 requires:
-  - seeed_xiao
+  - xiao_ble
 
 siblings:
   - ergonautkb_neo_left
