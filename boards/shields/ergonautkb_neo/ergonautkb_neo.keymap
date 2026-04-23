@@ -28,8 +28,8 @@
             display-name = "NEO2";
             bindings = <
                 &kp ESC     &kp DE_X        &kp DE_V        &kp DE_L         &kp DE_C         &kp DE_W       /**/   &kp DE_K       &kp DE_H       &kp DE_G       &kp DE_F     &kp DE_Q   &kp DE_SZ
-                &kp LCTRL   &mt LGUI DE_U   &mt LALT DE_I   &mt LSHFT DE_A   &mt LCTRL DE_E   &kp DE_O       /**/   &kp DE_S       &kp DE_N       &kp DE_R       &kp DE_T     &kp DE_D   &kp DE_Y
-                &kp LCTRL   &kp DE_UE        &kp DE_OE        &kp DE_AE         &kp DE_P         &kp DE_Z       /**/   &kp DE_B       &kp DE_M       &kp DE_COMMA   &kp DE_DOT   &kp DE_J   &kp RET
+                &kp LCTRL   &mt LGUI DE_U   &mt LALT DE_I   &mt LSHFT DE_A   &mt LCTRL DE_E   &kp DE_O       /**/   &kp DE_S       &kp DE_N       &kp DE_R       &kp DE_T     &kp DE_D   &kp DE_Y 
+                &kp LCTRL   &kp DE_UE       &kp DE_OE       &kp DE_AE        &kp DE_P         &kp DE_Z       /**/   &kp DE_B       &kp DE_M       &kp DE_COMMA   &kp DE_DOT   &kp DE_J   &kp RET  
                 /**/        /**/            /**/            &kp DE_SPACE     &kp DE_SPACE     &kp DE_SPACE   /**/   &kp DE_SPACE   &kp DE_SPACE   &kp DE_SPACE   /**/         /**/       /**/     
             >;
         };
