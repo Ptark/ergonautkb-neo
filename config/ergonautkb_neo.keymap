@@ -11,7 +11,10 @@
 
 &lt { quick-tap-ms = <200>; };
 
-&mt { quick-tap-ms = <200>; };
+&mt {
+    quick-tap-ms = <200>;
+    flavor = "tap-preferred";
+};
 
 / {
     // Define a default keymap here.
@@ -25,10 +28,10 @@
         default_layer {
             display-name = "Neo 2";
             bindings = <
-&kp ESCAPE  &kp DE_X         &kp DE_V         &kp DE_L         &kp DE_C      &kp DE_W    &kp DE_K  &kp DE_H        &kp DE_G      &kp DE_F    &kp DE_Q  &kp DE_SZ
-&kp LALT    &kp DE_U         &kp DE_I         &kp DE_A         &kp DE_E      &kp DE_O    &kp DE_S  &kp DE_N        &kp DE_R      &kp DE_T    &kp DE_D  &kp DE_Y
-&kp LCTRL   &kp DE_U_UMLAUT  &kp DE_O_UMLAUT  &kp DE_A_UMLAUT  &kp DE_P      &kp DE_Z    &kp DE_B  &kp DE_M        &kp DE_COMMA  &kp DE_DOT  &kp DE_J  &kp RIGHT_CONTROL
-                                              &kp LEFT_GUI     &kp DE_SPACE  &mo 2       &mo 2     &kp LEFT_SHIFT  &mo 1
+&kp ESCAPE  &kp DE_X           &kp DE_V           &kp DE_L             &kp DE_C               &kp DE_W    &kp DE_K  &kp DE_H        &kp DE_G      &kp DE_F    &kp DE_Q  &kp DE_SZ
+&kp LALT    &mt LEFT_GUI DE_U  &mt LEFT_ALT DE_I  &mt LEFT_SHIFT DE_A  &mt LEFT_CONTROL DE_E  &kp DE_O    &kp DE_S  &kp DE_N        &kp DE_R      &kp DE_T    &kp DE_D  &kp DE_Y
+&kp LCTRL   &kp DE_U_UMLAUT    &kp DE_O_UMLAUT    &kp DE_A_UMLAUT      &kp DE_P               &kp DE_Z    &kp DE_B  &kp DE_M        &kp DE_COMMA  &kp DE_DOT  &kp DE_J  &kp RIGHT_CONTROL
+                                                  &kp LEFT_GUI         &kp DE_SPACE           &mo 2       &mo 2     &kp LEFT_SHIFT  &mo 1
             >;
         };
 
