@@ -42,9 +42,9 @@
             bindings = <&kp LEFT_ALT>, <&kp LEFT_ALT>, <&to 5>;
         };
 
-        caps: caps {
+        shift_caps: shift_caps {
             compatible = "zmk,behavior-tap-dance";
-            label = "CAPS";
+            label = "SHIFT_CAPS";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
         };
@@ -61,17 +61,17 @@
 &kp ESCAPE        &kp DE_X           &kp DE_V           &kp DE_L             &kp DE_C               &kp DE_W    &kp DE_K  &kp DE_H                 &kp DE_G               &kp DE_F            &kp DE_Q            &kp DE_SZ
 &kp LEFT_CONTROL  &mt LEFT_GUI DE_U  &mt LEFT_ALT DE_I  &mt LEFT_SHIFT DE_A  &mt LEFT_CONTROL DE_E  &kp DE_O    &kp DE_S  &rmt RIGHT_CONTROL DE_N  &rmt RIGHT_SHIFT DE_R  &rmt LEFT_ALT DE_T  &rmt LEFT_GUI DE_D  &kp DE_Y
 &alt_s            &kp DE_U_UMLAUT    &kp DE_O_UMLAUT    &kp DE_A_UMLAUT      &kp DE_P               &kp DE_Z    &kp DE_B  &kp DE_M                 &kp DE_COMMA           &kp DE_DOT          &kp DE_J            &kp ENTER
-                                                        &kp LEFT_GUI         &kp DE_SPACE           &mo 3       &mo 3     &caps                    &mo 2
+                                                        &kp LEFT_GUI         &kp DE_SPACE           &mo 3       &mo 3     &shift_caps              &mo 2
             >;
         };
 
         qwertz_layer {
             display-name = "QWERTZ";
             bindings = <
-&kp ESCAPE        &kp DE_X           &kp DE_V           &kp DE_L             &kp DE_C               &kp DE_W    &kp DE_K  &kp DE_H                 &kp DE_G               &kp DE_F            &kp DE_Q            &kp DE_SZ
+&kp ESCAPE        &kp DE_Q           &kp DE_W           &kp DE_E             &kp DE_R               &kp DE_W    &kp DE_K  &kp DE_H                 &kp DE_G               &kp DE_F            &kp DE_Q            &kp DE_SZ
 &kp LEFT_CONTROL  &mt LEFT_GUI DE_U  &mt LEFT_ALT DE_I  &mt LEFT_SHIFT DE_A  &mt LEFT_CONTROL DE_E  &kp DE_O    &kp DE_S  &rmt RIGHT_CONTROL DE_N  &rmt RIGHT_SHIFT DE_R  &rmt LEFT_ALT DE_T  &rmt LEFT_GUI DE_D  &kp DE_Y
 &alt_s            &kp DE_U_UMLAUT    &kp DE_O_UMLAUT    &kp DE_A_UMLAUT      &kp DE_P               &kp DE_Z    &kp DE_B  &kp DE_M                 &kp DE_COMMA           &kp DE_DOT          &kp DE_J            &kp ENTER
-                                                        &kp LEFT_GUI         &kp DE_SPACE           &mo 3       &mo 3     &caps                    &mo 2
+                                                        &kp LEFT_GUI         &kp DE_SPACE           &mo 3       &mo 3     &shift_caps              &mo 2
             >;
         };
 
@@ -88,9 +88,9 @@
         navigation_number_layer {
             display-name = "NAVIGATION_NUMBER";
             bindings = <
-&trans  &kp HOME     &kp BSPC        &kp UP    &kp DELETE  &kp END          &kp DE_STAR   &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_PLUS       &kp DE_MINUS
-&trans  &kp PAGE_UP  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT   &kp PAGE_DOWN    &kp DE_SLASH  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_COMMA      &kp DE_DOT
-&trans  &kp ESCAPE   &kp TAB         &kp INS   &kp ENTER   &kp K_UNDO       &kp DE_N0     &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_SEMICOLON  &trans
+&trans  &kp HOME     &kp BSPC        &kp UP    &kp DELETE  &kp END          &kp DE_COMMA  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_SLASH      &kp DE_ASTERISK
+&trans  &kp PAGE_UP  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT   &kp PAGE_DOWN    &kp DE_DOT    &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_MINUS      &kp DE_PLUS
+&trans  &kp ESCAPE   &kp TAB         &kp INS   &kp ENTER   &kp K_UNDO       &kp DE_N0     &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_SEMICOLON  &kp ENTER
                                      &trans    &trans      &trans           &trans        &trans     &trans
             >;
         };
