@@ -9,14 +9,6 @@
 #define CTRL 4
 #define FUNC 5
 
-&lt {
-    quick-tap-ms = <200>;
-    bindings = <&kp>;
-    flavor = "balanced";
-    hold-trigger-key-positions = <12 1 26 0 14 16 2 3 4 5 13 15 28 27 25 24 17 29 37 38 36>;
-    hold-trigger-on-release;
-};
-
 &mt {
     quick-tap-ms = <200>;
     flavor = "balanced";
@@ -28,6 +20,20 @@
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
 
+    behaviors {
+        rmt: rmt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RMT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 24 25 13 14 26 27 15 16 28 29 17 36 37 38>;
+            hold-trigger-on-release;
+            tapping-term-ms = <200>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -36,10 +42,10 @@
         default_layer {
             display-name = "Neo 2";
             bindings = <
-&kp ESCAPE  &kp DE_X           &kp DE_V           &kp DE_L             &kp DE_C               &kp DE_W    &kp DE_K  &kp DE_H        &kp DE_G      &kp DE_F    &kp DE_Q  &kp DE_SZ
-&kp LALT    &mt LEFT_GUI DE_U  &mt LEFT_ALT DE_I  &mt LEFT_SHIFT DE_A  &mt LEFT_CONTROL DE_E  &kp DE_O    &kp DE_S  &kp DE_N        &kp DE_R      &kp DE_T    &kp DE_D  &kp DE_Y
-&kp LCTRL   &kp DE_U_UMLAUT    &kp DE_O_UMLAUT    &kp DE_A_UMLAUT      &kp DE_P               &kp DE_Z    &kp DE_B  &kp DE_M        &kp DE_COMMA  &kp DE_DOT  &kp DE_J  &kp RIGHT_CONTROL
-                                                  &kp LEFT_GUI         &kp DE_SPACE           &mo 2       &mo 2     &kp LEFT_SHIFT  &mo 1
+&kp ESCAPE  &kp DE_X           &kp DE_V           &kp DE_L             &kp DE_C               &kp DE_W    &kp DE_K  &kp DE_H                 &kp DE_G               &kp DE_F            &kp DE_Q            &kp DE_SZ
+&kp LALT    &mt LEFT_GUI DE_U  &mt LEFT_ALT DE_I  &mt LEFT_SHIFT DE_A  &mt LEFT_CONTROL DE_E  &kp DE_O    &kp DE_S  &rmt RIGHT_CONTROL DE_N  &rmt RIGHT_SHIFT DE_R  &rmt LEFT_ALT DE_T  &rmt LEFT_GUI DE_D  &kp DE_Y
+&kp LCTRL   &kp DE_U_UMLAUT    &kp DE_O_UMLAUT    &kp DE_A_UMLAUT      &kp DE_P               &kp DE_Z    &kp DE_B  &kp DE_M                 &kp DE_COMMA           &kp DE_DOT          &kp DE_J            &kp RIGHT_CONTROL
+                                                  &kp LEFT_GUI         &kp DE_SPACE           &mo 2       &mo 2     &kp LEFT_SHIFT           &mo 1
             >;
         };
 
