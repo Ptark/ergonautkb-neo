@@ -42,20 +42,20 @@
         default_layer {
             display-name = "Neo 2";
             bindings = <
-&kp ESCAPE  &kp DE_X           &kp DE_V           &kp DE_L             &kp DE_C               &kp DE_W    &kp DE_K  &kp DE_H                 &kp DE_G               &kp DE_F            &kp DE_Q            &kp DE_SZ
-&kp LALT    &mt LEFT_GUI DE_U  &mt LEFT_ALT DE_I  &mt LEFT_SHIFT DE_A  &mt LEFT_CONTROL DE_E  &kp DE_O    &kp DE_S  &rmt RIGHT_CONTROL DE_N  &rmt RIGHT_SHIFT DE_R  &rmt LEFT_ALT DE_T  &rmt LEFT_GUI DE_D  &kp DE_Y
-&kp LCTRL   &kp DE_U_UMLAUT    &kp DE_O_UMLAUT    &kp DE_A_UMLAUT      &kp DE_P               &kp DE_Z    &kp DE_B  &kp DE_M                 &kp DE_COMMA           &kp DE_DOT          &kp DE_J            &kp RIGHT_CONTROL
-                                                  &kp LEFT_GUI         &kp DE_SPACE           &mo 2       &mo 2     &kp LEFT_SHIFT           &mo 1
+&kp ESCAPE        &kp DE_X           &kp DE_V           &kp DE_L             &kp DE_C               &kp DE_W    &kp DE_K  &kp DE_H                 &kp DE_G               &kp DE_F            &kp DE_Q            &kp DE_SZ
+&kp LEFT_CONTROL  &mt LEFT_GUI DE_U  &mt LEFT_ALT DE_I  &mt LEFT_SHIFT DE_A  &mt LEFT_CONTROL DE_E  &kp DE_O    &kp DE_S  &rmt RIGHT_CONTROL DE_N  &rmt RIGHT_SHIFT DE_R  &rmt LEFT_ALT DE_T  &rmt LEFT_GUI DE_D  &kp DE_Y
+&kp LEFT_ALT      &kp DE_U_UMLAUT    &kp DE_O_UMLAUT    &kp DE_A_UMLAUT      &kp DE_P               &kp DE_Z    &kp DE_B  &kp DE_M                 &kp DE_COMMA           &kp DE_DOT          &kp DE_J            &kp ENTER
+                                                        &kp LEFT_GUI         &kp DE_SPACE           &mo 2       &mo 2     &kp LEFT_SHIFT           &mo 1
             >;
         };
 
         symbol_layer {
             display-name = "symbols";
             bindings = <
-&trans     &none             &kp DE_UNDERSCORE  &kp DE_LEFT_BRACKET  &kp DE_RIGHT_BRACKET  &kp DE_CARET       &kp DE_K  &kp DE_H        &kp DE_G      &kp DE_F    &kp DE_Q  &kp DE_SZ
-&trans     &kp DE_BACKSLASH  &kp DE_SLASH       &kp DE_LEFT_BRACE    &kp DE_RIGHT_BRACE    &kp DE_ASTERISK    &kp DE_S  &kp DE_N        &kp DE_R      &kp DE_T    &kp DE_D  &kp DE_Y
-&kp LCTRL  &kp DE_HASH       &kp DE_DOLLAR      &kp DE_PIPE          &kp DE_TILDE          &kp DE_GRAVE       &kp DE_B  &kp DE_M        &kp DE_COMMA  &kp DE_DOT  &kp DE_J  &kp RIGHT_CONTROL
-                                                &kp LEFT_GUI         &kp DE_SPACE          &trans             &trans    &kp LEFT_SHIFT  &trans
+&trans  &kp DE_DEG        &kp DE_UNDERSCORE  &kp DE_LEFT_BRACKET  &kp DE_RIGHT_BRACKET  &kp DE_CARET       &kp DE_EXCLAMATION  &kp DE_LESS_THAN         &kp DE_GREATER_THAN       &kp DE_EQUAL         &kp DE_AMPERSAND  &kp DE_EURO
+&trans  &kp DE_BACKSLASH  &kp DE_SLASH       &kp DE_LEFT_BRACE    &kp DE_RIGHT_BRACE    &kp DE_ASTERISK    &kp DE_QUESTION     &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_MINUS         &kp DE_COLON      &kp DE_AT
+&trans  &kp DE_HASH       &kp DE_DOLLAR      &kp DE_PIPE          &kp DE_TILDE          &kp DE_GRAVE       &kp DE_PLUS         &kp DE_PERCENT           &kp DE_DOUBLE_QUOTES      &kp DE_SINGLE_QUOTE  &kp DE_SEMICOLON  &trans
+                                             &trans               &trans                &trans             &trans              &trans                   &trans
             >;
         };
 
