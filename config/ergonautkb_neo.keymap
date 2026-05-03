@@ -78,10 +78,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp DE_DEG        &kp DE_UNDERSCORE  &kp DE_LEFT_BRACKET  &kp DE_RIGHT_BRACKET             &kp DE_CARET       &kp DE_EXCLAMATION  &kp DE_LESS_THAN         &kp DE_GREATER_THAN       &kp DE_EQUAL         &kp DE_AMPERSAND  &kp DE_EURO
-&trans  &kp DE_BACKSLASH  &kp DE_SLASH       &kp DE_LEFT_BRACE    &mt LEFT_CONTROL DE_RIGHT_BRACE  &kp DE_ASTERISK    &kp DE_QUESTION     &kp DE_LEFT_PARENTHESIS  &kp DE_RIGHT_PARENTHESIS  &kp DE_MINUS         &kp DE_COLON      &kp DE_AT
-&trans  &kp DE_HASH       &kp DE_DOLLAR      &kp DE_PIPE          &kp DE_TILDE                     &kp DE_GRAVE       &kp DE_PLUS         &kp DE_PERCENT           &kp DE_DOUBLE_QUOTES      &kp DE_SINGLE_QUOTE  &kp DE_SEMICOLON  &trans
-                                             &trans               &trans                           &trans             &trans              &trans                   &trans
+&trans  &kp DE_DEG                 &kp DE_UNDERSCORE      &kp DE_LEFT_BRACKET           &kp DE_RIGHT_BRACKET             &kp DE_CARET       &kp DE_EXCLAMATION  &kp DE_LESS_THAN                        &kp DE_GREATER_THAN                    &kp DE_EQUAL            &kp DE_AMPERSAND        &kp DE_EURO
+&trans  &mt LEFT_GUI DE_BACKSLASH  &mt LEFT_ALT DE_SLASH  &mt LEFT_SHIFT DE_LEFT_BRACE  &mt LEFT_CONTROL DE_RIGHT_BRACE  &kp DE_ASTERISK    &kp DE_QUESTION     &rmt RIGHT_CONTROL DE_LEFT_PARENTHESIS  &rmt RIGHT_SHIFT DE_RIGHT_PARENTHESIS  &rmt LEFT_ALT DE_MINUS  &rmt LEFT_GUI DE_COLON  &kp DE_AT
+&trans  &kp DE_HASH                &kp DE_DOLLAR          &kp DE_PIPE                   &kp DE_TILDE                     &kp DE_GRAVE       &kp DE_PLUS         &kp DE_PERCENT                          &kp DE_DOUBLE_QUOTES                   &kp DE_SINGLE_QUOTE     &kp DE_SEMICOLON        &trans
+                                                          &trans                        &trans                           &trans             &trans              &trans                                  &trans
             >;
         };
 
