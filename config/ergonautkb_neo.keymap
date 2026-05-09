@@ -40,7 +40,7 @@
             label = "ALT_SYS";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&kp LEFT_ALT>, <&kp LEFT_ALT>, <&to 5>;
+            bindings = <&kp LEFT_ALT>, <&kp LEFT_ALT>, <&tog 5>;
         };
 
         shift_caps: shift_caps {
@@ -55,6 +55,15 @@
             label = "BT_DEL";
             #binding-cells = <0>;
             bindings = <&none>, <&bt BT_CLR>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        reset_combo {
+            bindings = <&sys_reset>;
+            key-positions = <38 39 36 41>;
         };
     };
 
@@ -115,10 +124,10 @@
 
         bt_switch_layer {
             bindings = <
-&none    &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
-&bt_del  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &to 0  &to 1  &none  &none  &none
-&none    &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
-                                     &none         &none         &none           &none  &none  &none
+&none     &none         &none         &none         &bt_del       &none           &none  &none  &none  &none  &none  &none
+&none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &to 0  &to 1  &none  &none  &none
+&alt_sys  &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
+                                      &none         &none         &none           &none  &none  &none
             >;
 
             label = "BT_SWITCH";
