@@ -6,3 +6,11 @@ include:
     shield: ergonautkb_neo_right
   - board: xiao_ble
     shield: settings_reset
+  - board: xiao_ble
+    shield: ergonautkb_neo_left
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: ergonautkb_neo_left_debug
+  - board: xiao_ble
+    shield: ergonautkb_neo_right
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: ergonautkb_neo_right_debug
