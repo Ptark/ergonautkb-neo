@@ -72,6 +72,11 @@
             bindings = <&sys_reset>;
             key-positions = <38 39 36 41>;
         };
+
+        bootloader {
+            bindings = <&bootloader>;
+            key-positions = <38 39 36 41 24 35>;
+        };
     };
 
     keymap {
