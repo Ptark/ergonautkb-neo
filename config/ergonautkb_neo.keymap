@@ -21,6 +21,8 @@
     hold-trigger-on-release;
 };
 
+&sl { release-after-ms = <5000>; };
+
 / {
     behaviors {
         rmt: rmt {
@@ -40,7 +42,7 @@
             label = "ALT_SYS";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&kp LEFT_ALT>, <&kp LEFT_ALT>, <&tog 5>;
+            bindings = <&kp LEFT_ALT>, <&kp LEFT_ALT>, <&sl 5>;
         };
 
         shift_caps: shift_caps {
@@ -50,18 +52,11 @@
             bindings = <&kp LEFT_SHIFT>, <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
         };
 
-        bt_del: bt_del {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BT_DEL";
-            #binding-cells = <0>;
-            bindings = <&none>, <&bt BT_CLR>;
-        };
-
         ctrl_sys: ctrl_sys {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_SYS";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL>, <&kp LEFT_CONTROL>, <&tog 5>;
+            bindings = <&kp LEFT_CONTROL>, <&kp LEFT_CONTROL>, <&sl 5>;
         };
     };
 
@@ -134,9 +129,9 @@
 
         bt_switch_layer {
             bindings = <
-&none         &none         &none         &none         &bt_del       &sys_reset    &sys_reset  &none  &none  &none  &none  &none
+&bootloader   &none         &none         &none         &bt BT_CLR    &sys_reset    &sys_reset  &none  &none  &none  &none  &bootloader
 &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none         &none       &to 0  &to 1  &to 6  &to 7  &none
-&alt_sys      &none         &none         &none         &none         &none         &none       &none  &none  &none  &none  &none
+&none         &none         &none         &none         &none         &none         &none       &none  &none  &none  &none  &none
                                           &none         &none         &none         &none       &none  &none
             >;
 
