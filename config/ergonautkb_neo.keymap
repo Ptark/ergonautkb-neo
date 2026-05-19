@@ -22,7 +22,6 @@
 };
 
 / {
-
     behaviors {
         rmt: rmt {
             compatible = "zmk,behavior-hold-tap";
@@ -135,10 +134,10 @@
 
         bt_switch_layer {
             bindings = <
-&none         &none         &none         &none         &bt_del       &none    &none  &none  &none  &none  &none  &none
-&bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none    &none  &to 0  &to 1  &to 6  &to 7  &none
-&alt_sys      &none         &none         &none         &none         &none    &none  &none  &none  &none  &none  &none
-                                          &none         &none         &none    &none  &none  &none
+&none         &none         &none         &none         &bt_del       &sys_reset    &sys_reset  &none  &none  &none  &none  &none
+&bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none         &none       &to 0  &to 1  &to 6  &to 7  &none
+&alt_sys      &none         &none         &none         &none         &none         &none       &none  &none  &none  &none  &none
+                                          &none         &none         &none         &none       &none  &none
             >;
 
             label = "BT_SWITCH";
