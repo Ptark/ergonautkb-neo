@@ -49,7 +49,7 @@
         compatible = "zmk,combos";
 
         bt_layers {
-            bindings = <&tog 5>;
+            bindings = <&sl 5>;
             key-positions = <38 0 5>;
         };
     };
