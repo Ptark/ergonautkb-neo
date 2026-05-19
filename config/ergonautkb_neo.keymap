@@ -37,40 +37,20 @@
             tapping-term-ms = <200>;
         };
 
-        alt_sys: alt_sys {
-            compatible = "zmk,behavior-tap-dance";
-            label = "ALT_SYS";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp LEFT_ALT>, <&kp LEFT_ALT>, <&sl 5>;
-        };
-
         shift_caps: shift_caps {
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_CAPS";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
         };
-
-        ctrl_sys: ctrl_sys {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CTRL_SYS";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL>, <&kp LEFT_CONTROL>, <&sl 5>;
-        };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        reset_combo {
-            bindings = <&sys_reset>;
-            key-positions = <38 39 36 41 24>;
-        };
-
-        bootloader {
-            bindings = <&bootloader>;
-            key-positions = <38 39 36 41 35>;
+        bt_layers {
+            bindings = <&tog 5>;
+            key-positions = <38 0 5>;
         };
     };
 
@@ -82,7 +62,7 @@
             bindings = <
 &kp ESCAPE        &kp DE_X           &kp DE_V           &kp DE_L             &kp DE_C               &kp DE_W    &kp DE_K  &kp DE_H                 &kp DE_G               &kp DE_F            &kp DE_Q            &kp DE_SZ
 &kp LEFT_CONTROL  &mt LEFT_GUI DE_U  &mt LEFT_ALT DE_I  &mt LEFT_SHIFT DE_A  &mt LEFT_CONTROL DE_E  &kp DE_O    &kp DE_S  &rmt RIGHT_CONTROL DE_N  &rmt RIGHT_SHIFT DE_R  &rmt LEFT_ALT DE_T  &rmt LEFT_GUI DE_D  &kp DE_Y
-&alt_sys          &kp DE_U_UMLAUT    &kp DE_O_UMLAUT    &kp DE_A_UMLAUT      &kp DE_P               &kp DE_Z    &kp DE_B  &kp DE_M                 &kp DE_COMMA           &kp DE_DOT          &kp DE_J            &kp ENTER
+&kp LEFT_ALT      &kp DE_U_UMLAUT    &kp DE_O_UMLAUT    &kp DE_A_UMLAUT      &kp DE_P               &kp DE_Z    &kp DE_B  &kp DE_M                 &kp DE_COMMA           &kp DE_DOT          &kp DE_J            &kp ENTER
                                                         &kp LEFT_GUI         &kp DE_SPACE           &mo 3       &mo 3     &shift_caps              &mo 2
             >;
         };
@@ -92,7 +72,7 @@
             bindings = <
 &kp ESCAPE        &kp DE_Q           &kp DE_W           &kp DE_E             &kp DE_R               &kp DE_T    &kp DE_Z  &kp DE_U                 &kp DE_I               &kp DE_O            &kp DE_P                   &kp DE_U_UMLAUT
 &kp LEFT_CONTROL  &mt LEFT_GUI DE_A  &mt LEFT_ALT DE_S  &mt LEFT_SHIFT DE_D  &mt LEFT_CONTROL DE_F  &kp DE_G    &kp DE_H  &rmt RIGHT_CONTROL DE_J  &rmt RIGHT_SHIFT DE_K  &rmt LEFT_ALT DE_L  &rmt LEFT_GUI DE_O_UMLAUT  &kp DE_A_UMLAUT
-&alt_sys          &kp DE_Y           &kp DE_X           &kp DE_C             &kp DE_V               &kp DE_B    &kp DE_N  &kp DE_M                 &kp DE_COMMA           &kp DE_DOT          &kp DE_SZ                  &kp ENTER
+&kp LEFT_ALT      &kp DE_Y           &kp DE_X           &kp DE_C             &kp DE_V               &kp DE_B    &kp DE_N  &kp DE_M                 &kp DE_COMMA           &kp DE_DOT          &kp DE_SZ                  &kp ENTER
                                                         &kp LEFT_GUI         &kp DE_SPACE           &mo 3       &mo 2     &shift_caps              &mo 3
             >;
         };
@@ -142,7 +122,7 @@
             bindings = <
 &mt ESCAPE DE_T  &kp N1  &kp N2  &kp N3  &kp N4     &kp N5     &none  &none  &none  &none  &none  &none
 &kp LSHFT        &kp Q   &kp W   &kp E   &kp R      &kp T      &none  &none  &none  &none  &none  &none
-&alt_sys         &kp A   &kp S   &kp D   &kp F      &kp G      &none  &none  &none  &none  &none  &none
+&kp LEFT_ALT     &kp A   &kp S   &kp D   &kp F      &kp G      &none  &none  &none  &none  &none  &none
                                  &kp Y   &kp SPACE  &kp TAB    &none  &none  &none
             >;
 
@@ -151,10 +131,10 @@
 
         gaming_layer {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E    &kp R      &kp T    &none  &none  &none  &none  &none  &none
-&kp LSHFT  &kp A  &kp S  &kp D    &kp F      &kp G    &none  &none  &none  &none  &none  &none
-&ctrl_sys  &kp Z  &kp X  &kp C    &kp V      &kp B    &none  &none  &none  &none  &none  &none
-                         &kp ESC  &kp SPACE  &mo 8    &none  &none  &none
+&kp TAB           &kp Q  &kp W  &kp E    &kp R      &kp T    &none  &none  &none  &none  &none  &none
+&kp LSHFT         &kp A  &kp S  &kp D    &kp F      &kp G    &none  &none  &none  &none  &none  &none
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C    &kp V      &kp B    &none  &none  &none  &none  &none  &none
+                                &kp ESC  &kp SPACE  &mo 8    &none  &none  &none
             >;
 
             label = "GAMING";
