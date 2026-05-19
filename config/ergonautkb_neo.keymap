@@ -117,8 +117,8 @@
         navigation_number_layer {
             display-name = "NAVIGATION_NUMBER";
             bindings = <
-&trans  &kp HOME     &kp BSPC        &kp UP    &kp DELETE  &kp END            &kp DE_COMMA  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_SLASH      &kp DE_ASTERISK
-&trans  &kp PAGE_UP  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT   &kp PAGE_DOWN      &kp DE_DOT    &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_MINUS      &kp DE_PLUS
+&trans  &kp PAGE_UP  &kp BSPC        &kp UP    &kp DELETE  &kp PAGE_DOWN      &kp DE_COMMA  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_SLASH      &kp DE_ASTERISK
+&trans  &kp HOME     &kp LEFT_ARROW  &kp DOWN  &kp RIGHT   &kp END            &kp DE_DOT    &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_MINUS      &kp DE_PLUS
 &trans  &kp ESCAPE   &kp TAB         &kp INS   &kp ENTER   &kp PRINTSCREEN    &kp DE_N0     &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_SEMICOLON  &kp ENTER
                                      &trans    &trans      &trans             &trans        &trans     &trans
             >;
