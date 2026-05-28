@@ -8,7 +8,6 @@ include:
     shield: settings_reset
   - board: seeeduino_xiao_ble
     shield: ergonautkb_neo_left
-    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
     artifact-name: ergonautkb_neo_left_debug
   - board: seeeduino_xiao_ble
     shield: ergonautkb_neo_right
