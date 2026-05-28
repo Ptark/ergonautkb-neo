@@ -1,0 +1,37 @@
+#include "dactyl_manuform_4x6.dtsi"
+
+/*
+ * Pin mapping from QMK (ATmega32U4 AVR names → Arduino Pro Micro pin numbers).
+ * Verify against your specific RP2040 Pro Micro board's GPIO map.
+ *
+ * cols: D4→4, C6→5, D7→6, E6→7, B4→8, B5→9
+ * rows: F7/A0→18, B1/SCK→15, B3/MISO→14, B2/MOSI→16, B6→10
+ */
+&kscan0 {
+    col-gpios
+        = <&pro_micro 4 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 5 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 6 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 7 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 8 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 9 GPIO_ACTIVE_HIGH>
+        ;
+    row-gpios
+        = <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        ;
+};
+
+/ {
+    chosen {
+        zmk,split-serial = &uart0;
+    };
+};
+
+&uart0 {
+    status = "okay";
+    current-speed = <115200>;
+};

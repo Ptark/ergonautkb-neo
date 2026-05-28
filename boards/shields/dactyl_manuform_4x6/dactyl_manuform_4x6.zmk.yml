@@ -1,0 +1,12 @@
+file_format: "1"
+id: dactyl_manuform_4x6
+name: Dactyl Manuform 4x6
+type: shield
+url: ""
+features:
+  - keys
+requires:
+  - pro_micro
+siblings:
+  - dactyl_manuform_4x6_left
+  - dactyl_manuform_4x6_right
