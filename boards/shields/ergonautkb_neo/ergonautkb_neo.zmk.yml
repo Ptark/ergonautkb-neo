@@ -17,7 +17,7 @@ features:
   - studio # Remove this line if your keyboard will not support ZMK Studio
 
 requires:
-  - xiao_ble
+  - seeeduino_xiao_ble
 
 siblings:
   - ergonautkb_neo_left
